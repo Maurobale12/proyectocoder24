@@ -1,0 +1,530 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+.icono-wsapp{
+    margin: 0;
+    background-color: green;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icono-wsapp i{
+    color: ghostwhite;
+    font-size: 3rem;
+}
+/*---container---*/
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+/*---header---*/
+
+.header-wrapper {
+    background-color: black;
+
+    position: sticky;
+    top: 0;
+}
+
+header {
+    background-color: black;
+    color: aliceblue;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    
+
+}
+
+header nav ul li a {
+    color: white;
+}
+
+
+nav ul li a:hover {
+    text-decoration: underline;
+
+}
+
+.header-formulario {
+    display: none;
+}
+
+@media(min-width:480px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-lista {
+        display: flex;
+        gap: 1rem;
+    }
+
+}
+
+@media(min-width:768px) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px;
+    }
+
+    header h1 {
+        text-align: start;
+    }
+
+    .header-formulario {
+        justify-self: end;
+        align-self: center;
+        display: block;
+    }
+
+    header nav {
+        grid-column: span 2;
+    }
+
+    .nav-lista {
+        justify-content: center;
+    }
+}
+
+@media(min-width:1200px) {
+    header {
+        display: flex;
+    }
+}
+
+/*---Portada-index---*/
+
+.portada {
+    height: 91vh;
+    background-image: url(../img/messi.jpeg);
+    background-position: center;
+    background-size: cover;
+
+    padding: 3rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.portada-titulo {
+    background-color: rgba(70, 154, 180, 0.606);
+    text-align: center;
+    padding: 16px;
+    border-radius: 16px;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.portada-descripcion {
+    background-color: rgba(70, 154, 180, 0.606);
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    gap: 1rem;
+}
+
+
+@media(min-width:768px) {
+    .portada {
+        min-height: 80vh;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+    }
+
+    .portada-texto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+
+
+    .portadatitulo {
+        font-size: 3rem;
+        text-align: center;
+    }
+}
+
+/*---Galeria-index---*/
+
+.galeria {
+    padding: 1rem;
+    background-color: black;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.galeria-titulo {
+    color: aliceblue;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+}
+
+.cont-galeria {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+@media(min-width:768px) {
+    .cont-galeria {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .img-destacada {
+
+        grid-column: span 2;
+    }
+}
+
+@media(min-width:1200px) {
+    .cont-galeria {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: repeat(2, 300px);
+    }
+
+    .cont-galeria img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+
+    }
+
+    .img-destacada {
+        grid-column: span 1;
+        grid-row: span 2;
+
+
+    }
+}
+
+
+
+/*---grilla clubes con grid---*/
+
+
+.productos-clubes {
+    padding: 2px;
+    background-color:rgba(255, 255, 255, 0.628) ;
+}
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 10px;
+    padding-top: 10px;
+}
+.tarjeta-producto {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: black;
+    width: 100%; 
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.tarjeta-cuerpo {
+    background-color: black;
+    color: aliceblue;
+    border-top: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 8px;
+}
+
+.tarjeta-boton{
+    background-color: white;
+    padding: 5px 3px;
+    
+    color: black;
+    border-radius: 30px;
+    border: 2px black;
+    font-size: 12px;
+}
+
+@media (min-width: 768px){
+        .contenedor-productos {
+            grid-template-columns: repeat(3, 1fr); 
+    gap: 10px;
+    padding-top: 10px;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.tarjeta-producto {
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+
+.tarjeta-cuerpo {
+    background-color: black;
+    color: aliceblue;
+    border-top: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 8px;
+}
+
+.tarjeta-boton{
+    font-size: 16px;
+    background-color: white;
+    padding: 5px 3px;
+    display: inline-block;
+    color: black;
+    border-radius: 30px;
+    border: 2px black;
+}
+
+}
+
+@media (min-width: 1200px) {
+    .contenedor-productos {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+        gap: 10px;
+    padding-top: 10px;
+    justify-content: center; 
+    align-items: center; 
+    }
+}
+
+/*---grilla seleccion con bs---*/
+
+
+    
+    
+
+
+
+
+
+/*---contacto---*/
+
+.contacto{
+    padding:3rem 1rem;
+}
+
+.contacto img{
+    display: none;
+}
+
+.contacto h2{
+    text-decoration: underline;
+    text-align: center;
+}
+
+.form-contacto{
+    box-shadow: 2px 2px 10px;
+    border-radius:10px ;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:0.5rem ;
+}
+
+.form-boton{
+    background-color: rgba(228, 218, 16, 0.558);
+    padding: 1rem 2rem ;
+    align-self: center;
+    color: black;
+    border-radius: 10px;
+}
+
+
+@media(min-width:768px){
+    .contacto{
+        display: flex;
+        justify-content: center
+        
+    }
+    .contacto img{
+        display:block;
+        height: 100%;
+        object-fit:cover ;
+        
+    }
+
+    .cont-contacto{
+        display: grid;
+        grid-template-columns:1fr 2fr ;
+        border-radius:10px;
+        overflow: hidden;
+
+        box-shadow: 0px 3px 10px;
+    }
+
+    .form-contacto{
+    border-radius: 0;   
+    box-shadow: 0px 0px 0px;     
+    }
+}
+
+/*---video-contacto---*/
+
+
+.cont-tutorial {
+    width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.cont-tutorial h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+
+.cont-tutorial iframe {
+    width: 100%;
+    height: 315px;
+}
+
+
+
+/*---Mapa-contacto---*/
+
+.map-wrapper iframe {
+    
+    width: 100%;
+}
+
+
+/*---Footer---*/
+
+footer {
+    border-top: 2px solid white;
+    background-color: black;
+    color: rgba(255, 255, 255, 0.628);
+
+
+    padding: 1rem;
+}
+
+.footer-copy{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.footer-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    gap: 1.4rem;
+    border-bottom:1px solid white ;
+    padding: 1rem;
+}
+
+.footer-wrapper h4{
+    font-size:1.2rem ;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+}
+
+.footer-wrapper h4,
+.footer-wrapper p{
+    text-align: center;
+}
+
+.footer-info,
+.footer-redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.footer-redes ul li a {
+    color:rgba(255, 255, 255, 0.628);
+
+}
+
+.footer-redes ul li a i {
+    font-size: 1.3rem;
+}
+
+@media(min-width:768px) {
+    .footer-wrapper{
+        display: grid;
+        grid-template-columns:1fr 1fr 2fr ;
+    }
+    .footer-newsletter{
+
+        display:flex ;
+        flex-direction: column;
+        align-items: center;
+
+    }
+}
