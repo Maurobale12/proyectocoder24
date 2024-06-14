@@ -1,0 +1,135 @@
+.icono-wsapp{
+    margin: 0;
+    background-color: green;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icono-wsapp i{
+    color: ghostwhite;
+    font-size: 3rem;
+}
+
+.productos-clubes {
+    padding: 2px;
+    background-color:rgba(255, 255, 255, 0.628) ;
+}
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 10px;
+    padding-top: 10px;
+}
+.tarjeta-producto {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: black;
+    width: 100%; 
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.tarjeta-cuerpo {
+    background-color:$color-negro ;
+    color: aliceblue;
+    border-top: 2px solid $color-negro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 8px;
+}
+
+.tarjeta-boton{
+    background-color:$color-blanco ;
+    padding: 5px 3px;
+    
+    color: $color-negro;
+    border-radius: 30px;
+    border: 2px black;
+    font-size: 12px;
+}
+
+@media (min-width: 768px){
+        .contenedor-productos {
+            grid-template-columns: repeat(3, 1fr); 
+    gap: 10px;
+    padding-top: 10px;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.tarjeta-producto {
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: $color-negro;
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-producto:hover img {
+    transform: scale(0.9);
+}
+
+
+.tarjeta-cuerpo {
+    background-color:$color-negro ;
+    color: aliceblue;
+    border-top: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 8px;
+}
+
+.tarjeta-boton{
+    font-size: 16px;
+    background-color:$color-blanco ;
+    padding: 5px 3px;
+    display: inline-block;
+    color: black;
+    border-radius: 30px;
+    border: 2px solid black;
+    transition: transform 2s ease;
+}
+
+.tarjeta-boton:hover{
+    transform: scale(1.3);
+    color: goldenrod;
+}
+
+
+}
+
+@media (min-width: 1200px) {
+    .contenedor-productos {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+        gap: 10px;
+    padding-top: 10px;
+    justify-content: center; 
+    align-items: center; 
+    }
+}
+
+
