@@ -28,3 +28,18 @@ img {
     margin: 0 auto;
 
 }
+
+
+@mixin mq-sm{
+    @media(min-width:480px){
+        @content;
+    }
+
+}
+
+@mixin mq-md{
+    @media(min-width:768px){
+        @content;
+    }
+
+}
